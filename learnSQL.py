@@ -23,6 +23,14 @@ def view():
     rows=cur.fetchall()
     conn.close()
     return rows
-# rows is returned as a python list
+    # rows is returned as a python list
+
+def view():
+    conn=sqlite3.connect("lite.db")
+    cur=conn.cursor()
+    cur.execute("DELETE FROM store WHERE")
+    rows=cur.fetchall()
+    conn.close()
+    return rows
 
 print(view())
